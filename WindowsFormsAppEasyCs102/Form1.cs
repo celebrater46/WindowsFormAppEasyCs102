@@ -54,7 +54,8 @@ namespace WindowsFormsAppEasyCs102
                 ofd.Filter = "Text File | *.txt";
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    StreamReader sr = new StreamReader(ofd.FileName, System.Text.Encoding.Default);
+                    // StreamReader sr = new StreamReader(ofd.FileName, System.Text.Encoding.Default);
+                    StreamReader sr = new StreamReader(ofd.FileName, System.Text.Encoding.UTF8);
                     tb.Text = sr.ReadToEnd();
                     sr.Close();
                 }
